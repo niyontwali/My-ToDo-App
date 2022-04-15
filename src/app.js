@@ -30,7 +30,7 @@ if (app.get('env') === 'development'){
 }
 
 // Port and hostname
-const port = process.env.APP_PORT;
+const port = process.env.PORT || 5000;
 const hostname = process.env.HOST_NAME;
 
 // app listening to requests setup
