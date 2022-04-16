@@ -21,10 +21,9 @@ class Tasks {
         data
       });
     })
-    .catch((err) => {
+    .catch(() => {
       res.status(400).json({
-        error: 'Sorry, the task was not create',
-        err
+        error: 'Sorry, the task was not create, try again',
       });
     });
 
@@ -44,9 +43,9 @@ class Tasks {
           data
         });
       })
-      .catch((err) => {
+      .catch(() => {
          res.status(404).json({
-           err
+           error: 'Sorry, try again'
          });
       });
   };
@@ -69,10 +68,9 @@ class Tasks {
       });
     });
   })
-  .catch(err => {
+  .catch(() => {
     res.status(400).json({
-      error: 'Something did not go right, your task was not updated',
-      err
+      error: 'Sorry, the id entered does not exist or its not a number!',
     });
   });
   }
@@ -96,9 +94,9 @@ class Tasks {
         });
       });
     })
-    .catch(err => {
-      res.status.json({
-        err
+    .catch(() => {
+      res.status(404).json({
+        error: 'The id of the task should be a number'
       });
     });
 

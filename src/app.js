@@ -1,12 +1,11 @@
 import express from 'express'; 
-import logger from 'morgan';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
+import { sequelize } from '../models';
 
 // imported routes for our app
 import homeRoute from './routes/homeRoute';
 import tasksRoute from './routes/tasksRoute';
-import { sequelize } from '../models';
 // configure dotenv
 dotenv.config();
 
@@ -23,12 +22,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(homeRoute);
 app.use(tasksRoute);
 
-// Development logger(Morgan)
-if (app.get('env') === 'development'){
-  app.use(logger('dev'));
-  console.log('Morgan logger is enabled ...');
-}
-
 // Port and hostname
 const port = process.env.PORT || 5000;
 const hostname = process.env.HOST_NAME;
@@ -44,3 +37,6 @@ app.listen(port, ()=>{
     console.log(err);
   });
 });
+
+// eslint-disable-next-line import/prefer-default-export
+export {app};
