@@ -1,18 +1,17 @@
 const newTask = {
-  task: 'Learning Flutter'
+  task: "Learning Flutter",
 };
 
-const updateTask =  {
-  task: 'Learning Node.js'
+const updateTask = {
+  task: "Learning Node.js",
 };
 
 const emptyTask = {
-  task: ''
-}
-
+  task: "",
+};
 
 module.exports = {
   newTask,
   updateTask,
-  emptyTask
+  emptyTask,
 };
