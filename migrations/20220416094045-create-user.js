@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable strict */
 
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -7,6 +9,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
+      },
+      fullname: {
+        type: Sequelize.STRING,
       },
       email: {
         type: Sequelize.STRING,

@@ -2,20 +2,22 @@ module.exports = {
   env: {
     commonjs: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
-    'eslint:recommended',
-    'airbnb-base', 'eslint:recommended', 'prettier'
+    "eslint:recommended",
+    "airbnb-base",
+    "eslint:recommended",
+    "prettier",
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: "latest",
   },
   rules: {
-    'linebreak-style': 0,
-    'no-console': 0,
-    'no-void': 0,
-    'semi':1
-
-  }
+    "linebreak-style": 0,
+    "no-console": 0,
+    "no-void": 0,
+    semi: 1,
+    "no-unused-vars": 0,
+  },
 };
